@@ -1,0 +1,19 @@
+#searchDrop{
+    width: auto;
+    justify-items: end;
+    
+}
+
+#main{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#searchText{
+    margin-right: 12px;
+}
+
+.searchBox{
+    margin-right: 12px;
+    max-width: 250px;
+}
