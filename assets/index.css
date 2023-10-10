@@ -17,3 +17,11 @@
     margin-right: 12px;
     max-width: 250px;
 }
+
+#dropdown1{
+    text-align: right;
+}
+
+.title{
+    font-family: Lucida Console, Courier New, monospace;
+}
