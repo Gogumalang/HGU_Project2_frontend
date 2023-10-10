@@ -11,15 +11,15 @@
   <body>
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">세영이 독서일기</a>
+      <div class="container-fluid px-4">
+        <a class="navbar-brand mb-0 h1" href="#">세영이 독서일기</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./form.html">Add</a>
@@ -32,7 +32,10 @@
     <div id="main d-flex">
        <h1 id="title">해리포터</h1>
        <div class="container">
-            <p class="text-muted" id="writer">by 박세영 2023/10/23</p>
+            <p class="text-muted" id="by">by</p>
+            <p class="text-muted" id="writer">박세영</p>
+            <p class="text-muted" id="date"> 2023/10/23</p>
+            <p></p><p></p>
             <p>나는 해리포터가 세상에서 제일 좋아한다. 매일매일 읽고 싶다. 때로는 호그와트에 입학하고 싶어서 서류전형을 알아보게된다. 하지만 이 학교는 다른 대학교와 전혀 다르다. 실기가 80 면접이 20이다. 
                 나는 마법을 할 줄 모르기에 80점을 깎이고 시작하게 된다. 절망스럽다. <br>
 
@@ -70,26 +73,3 @@
     
   </body>
 </html>
-
-<div name="search" class="row  mb-3 mt-5 border-bottom ">
-    <h2 class=" col-sm-4 p-3">Book List</h2>
-    <div class="col">
-    <div class="row"  id = "dropdown1">
-      <div class="col">
-        <div class="dropdown" id="searchDrop">
-          <button type="button" class="btn btn-primary dropdown-toggle my-3" data-bs-toggle="dropdown">
-            장르
-          </button>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">소설</a></li>
-            <li><a class="dropdown-item" href="#">에세이</a></li>
-            <li><a class="dropdown-item" href="#">과학잡지</a></li>
-          </ul>
-        </div>
-      </div>
-      
-      <input type="text" class="col my-3 searchBox"  placeholder="Titie" name="search">
-      <div class="my-3 col btn btn-outline-success searchBox">search</div>
-    </div>
-  </div>
-</div>

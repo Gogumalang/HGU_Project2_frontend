@@ -10,69 +10,94 @@
 
     <title>Form Page</title>
     <style>
-        body {
-            padding-top: 70px;
-            padding-bottom: 30px;
-        }
+        
     </style>
 </head>
 <body>
-    <div class="container" >
-        <h2 class="mb-5">글쓰기</h2>
+    <div class="container " >
+        <h1 class="mb-5 ">글쓰기</h1>
         <form action="form_test.php" method="post">
             <div class="row mb-3">
                 <div class="col-sm-8 mb-3">
                     <label for="title" class="form-label">제목</label>
                     <input type="text" name="title" id="title" class="form-control" placeholder="제목을 입력해주세요">
                 </div>
-    
-                <div class="col-sm-4">
-                    <label for="writer" class="form-label">저자</label>
-                    <input type="text" name="writer" id="writer" class="form-control" placeholder="저자를 입력해주세요">
+
+                <div class="col-sm-4"> 
+                    <label for="date" class="form-label">작성일자</label>
+                    <input type="date" name="date" id="date" class="form-control" >
                 </div>
             </div>
             
-            <div class="row">
-                <div class="mb-3 col-sm-4">
-                    <select class="form-select" name="genre" aria-label="Default select example">
-                        <option selected>장르</option>
-                        <option value="1">소설</option>
-                        <option value="2">에세이</option>
-                        <option value="3">시</option>
-                    </select>
+            <div class="row ">
+                <div class="col-sm mb-3">
+                    <label for="writer" class="form-label">저자</label>
+                    <input type="text" name="writer" id="writer" class="form-control" placeholder="저자를 입력해주세요">
                 </div>
+
+                <div class="col-sm row"> 
+
+                    <div class="col mb-3">
+                        <label for="genre" class="form-label">장르</label>
+                        <select class="form-select" name="genre" aria-label="Default select example">
+                            <option selected>장르</option>
+                            <option value="1">소설</option>
+                            <option value="2">에세이</option>
+                            <option value="3">시</option>
+                        </select>
+                    </div>
+                
     
-                <div class="mb-3 col-sm-4">
-                    <select class="form-select" name="rating" aria-label="Default select example">
-                        <option selected>별점</option>
-                        <option value="1">*</option>
-                        <option value="2">**</option>
-                        <option value="3">***</option>
-                    </select>
+                    <div class="col mb-3">
+                        <label for="rating" class="form-label">별점</label>
+                        <select class="form-select" name="rating" aria-label="Default select example">
+                            <option selected>별점</option>
+                            <option value="1">*</option>
+                            <option value="2">**</option>
+                            <option value="3">***</option>
+                        </select>
+                    </div>
                 </div>
             </div>
             
             
             <div class="mb-3">
-                <label class="mb-2" for="textarea">글</label>
-                <textarea class="form-control" name="textarea1" id="textarea1" cols="30" rows="10"></textarea>
+                <label class="mb-2" for="textarea">본문</label>
+                <textarea class="form-control" name="textarea1" id="textarea1" cols="30" rows="15"></textarea>
             </div>
             <div class="d-flex justify-content-start gap-2">
-                <div >
-                    <button type="submit" class="btn btn-primary">Edit</button>
+                <div>
+                    <button type="submit" class="btn btn-primary" onclick="vailidSave()">수정하기</button>
                 </div>
                 <div >
-                    <button type="reset" class="btn btn-outline-primary">Reset</button>
-                </div>
-                <div >
-                    <button class="btn btn-outline-primary">Cancel</button>
+                    <button type="reset" class="btn btn-outline-secondary">Reset</button>
                 </div>
                 <div>
-                    <button class="btn btn-outline-primary">Delete</button>
+                    <button class="btn btn-outline-secondary">Cancel</button>
+                </div>
+                <div>
+                    <button class="btn btn-outline-secondary">Delete</button>
                 </div>
             </div>
         </form>
     </div>
-    
+
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Company, Inc</span>
+          </div>
+      
+          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
+          </ul>
+        </footer>
+    </div>
 </body>
 </html>
+

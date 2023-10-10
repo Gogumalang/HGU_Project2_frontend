@@ -17,3 +17,16 @@ p{
     font-size: 20px;
     color: #00000f;
 }
+
+#by{
+    display: inline;
+    font-family: "Lucida Console", "Courier New", "monospace";
+}
+#writer{
+    display: inline;
+    font-family: "Lucida Console", "Courier New", "monospace";
+}
+#date{
+    display: inline;
+    font-family: "Lucida Console", "Courier New", "monospace";
+}
