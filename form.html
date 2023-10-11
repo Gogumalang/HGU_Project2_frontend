@@ -37,26 +37,26 @@
                     .forms["myForm"]["textarea1"]
                     .value;
                 if (title == "") {
-                    alert("제목");
+                    alert("제목을 입력해주세요.");
                     return false;
                 } else if (date == "") {
-                    alert("날짜");
+                    alert("날짜를 입력해주세요.");
                     return false;
                 }
                 if (writer == "") {
-                    alert("저자");
+                    alert("저자를 입력해주세요.");
                     return false;
                 }
                 if (genre == "") {
-                    alert("장르");
+                    alert("장르를 입력해주세요.");
                     return false;
                 }
                 if (rating == "") {
-                    alert("별점");
+                    alert("별점을 입력해주세요.");
                     return false;
                 }
                 if (textarea1 == "") {
-                    alert("본문");
+                    alert("본문을 입력해주세요.");
                     return false;
                 } else {
                     alert("성공적으로 저장되었습니다.");
@@ -65,18 +65,19 @@
             }
 
             function confirmCancel() {
-                if (confirm("취소 할래?") == true) {
+                if (confirm("게시물 작성을 취소하시겠습니까?") == true) {
                     location.href = "./index.html";
                 } else {
-                    alert("오케이 수고해 다시 작성해~");
+                    
                 }
-
             }
+
         </script>
     </head>
     <body>
         <div class="container">
-            <h1 class="mb-5 ">글쓰기</h1>
+            <h1 class="mb-x ">글쓰기</h1>
+            <hr id="hr1">
             <form action="form_test.php" method="post" name="myForm">
                 <div class="row mb-3">
                     <div class="col-sm-8 mb-3">

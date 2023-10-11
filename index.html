@@ -15,14 +15,31 @@
             crossorigin="anonymous"></script>
         <link rel="stylesheet" href="assets/index.css">
         <script>
-            function deleteTable() {
-                if (confirm("정말 글을 삭제하시겠습니까?")) {
-                    HTMLTableElement.deleteRow(index);
+            function confirmDelete() {
+                if (confirm("위 게시물을 삭제하시겠습니까?") == true) {
+                    alert("삭제되었습니다.");
+
+                } else {
+
+                    return false;
                 }
             }
 
             function searchVal() {
                 // 만약 검색 값이 없다면 없다고 알림창 띄우고 하지 않게 하기 있다면, 장르도 있는지 고려하여서 검색 결과 찾기
+                let content = document
+                    .forms["search"]["content"]
+                    .value;
+                let genre = document
+                    .forms["search"]["genre"]
+                    .value;
+
+                if (content == "") {
+                    alert("검색할 제목을 입력하세요.");
+                    return false;
+                } else {
+                    return false;
+                }
             }
         </script>
     </head>
@@ -45,7 +62,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="./form.html">Add</a>
@@ -59,7 +76,7 @@
                 <div name="search" class="row mb-3 mt-5 border-bottom ">
                     <h2 class="col-sm-6 p-3">Book List</h2>
                     <div class="col-sm-6">
-                        <form action="search.php" method="post">
+                        <form name="search" action="search.php" method="post">
                             <div class="row column-gap-2 py-3">
                                 <select
                                     class="form-select col "
@@ -70,8 +87,8 @@
                                     <option value="2">에세이</option>
                                     <option value="3">시</option>
                                 </select>
-                                <input type="text" class="col-6 " placeholder="Titie" name="search">
-                                <button type="submit" class="col btn btn-primary" onclick="searchVal()">search</button>
+                                <input type="text" class="col-6 " placeholder="Titie" name="content">
+                                <button type="submit" class="col btn btn-primary" onclick="return searchVal()">search</button>
                             </div>
                         </form>
                     </div>
@@ -95,43 +112,71 @@
                             <tr>
                                 <td>1</td>
                                 <td>
-                                    <a class="link-underline link-underline-opacity-0 link-dark title" href="#">해리포터</a>
+                                    <a class="link-underline link-underline-opacity-0 link-dark title" href="./view.html">해리포터</a>
                                 </td>
                                 <td>J.K.롤링</td>
                                 <td>소설</td>
-                                <td>***</td>
+                                <td>⭐️⭐️⭐️</td>
                                 <td>2023/10/11</td>
                                 <td>
-                                    <button>edit</button>
-                                    <button onclick="deleteTable()">delete</button>
+                                    <button class="btn btn-outline-secondary btn-sm"><a class="link-underline link-underline-opacity-0 link-dark " href="./edit.html">edit</a> </button>
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="confirmDelete()">delete</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>2</td>
                                 <td>
-                                    <a class="link-underline link-underline-opacity-0 link-dark title" href="#">짱구</a>
+                                    <a class="link-underline link-underline-opacity-0 link-dark title" href="./view.html">짱구</a>
                                 </td>
                                 <td>엄마</td>
                                 <td>소설</td>
-                                <td>***</td>
-                                <td>2023/10/11</td>
+                                <td>⭐️⭐️⭐️</td>
+                                <td>2023/9/11</td>
                                 <td>
-                                    <button>edit</button>
-                                    <button onclick="deleteTable()">delete</button>
+                                    <button class="btn btn-outline-secondary btn-sm"><a class="link-underline link-underline-opacity-0 link-dark " href="./edit.html">edit</a> </button>
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="confirmDelete()">delete</button>
                                 </td>
                             </tr>
                             <tr>
                                 <td>3</td>
                                 <td>
-                                    <a class="link-underline link-underline-opacity-0 link-dark title" href="#">아따맘마</a>
+                                    <a class="link-underline link-underline-opacity-0 link-dark title" href="./view.html">아따맘마</a>
                                 </td>
                                 <td>아빠</td>
                                 <td>소설</td>
-                                <td>***</td>
+                                <td>⭐️⭐️</td>
                                 <td>2023/10/11</td>
                                 <td>
-                                    <button>edit</button>
-                                    <button onclick="deleteTable()">delete</button>
+                                    <button class="btn btn-outline-secondary btn-sm"><a class="link-underline link-underline-opacity-0 link-dark " href="./edit.html">edit</a> </button>
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="confirmDelete()">delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>
+                                    <a class="link-underline link-underline-opacity-0 link-dark title" href="./view.html">연금술사</a>
+                                </td>
+                                <td>파울로코엘료</td>
+                                <td>소설</td>
+                                <td>⭐️⭐️⭐️</td>
+                                <td>2023/10/1</td>
+                                <td>
+                                    <button class="btn btn-outline-secondary btn-sm"><a class="link-underline link-underline-opacity-0 link-dark " href="./edit.html">edit</a> </button>
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="confirmDelete()">delete</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>
+                                    <a class="link-underline link-underline-opacity-0 link-dark title" href="./view.html">피로사회</a>
+                                </td>
+                                <td>한병철</td>
+                                <td>에세이</td>
+                                <td>⭐️⭐️</td>
+                                <td>2023/10/5</td>
+                                <td>
+                                    <button class="btn btn-outline-secondary btn-sm"><a class="link-underline link-underline-opacity-0 link-dark " href="./edit.html">edit</a> </button>
+                                    <button class="btn btn-outline-secondary btn-sm" onclick="confirmDelete()">delete</button>
                                 </td>
                             </tr>
                         </tbody>

@@ -100,10 +100,10 @@
                         <button type="reset" class="btn btn-outline-secondary" onclick="return confirmReset()">Reset</button>
                     </div>
                     <div>
-                        <button class="btn btn-outline-secondary" onclick="confirmCancel()">Cancel</button>
+                        <button type="reset" class="btn btn-outline-secondary" onclick="return confirmCancel()">Cancel</button>
                     </div>
                     <div>
-                        <button class="btn btn-outline-secondary" onclick="confirmDelete()">Delete</button>
+                        <button type="reset" class="btn btn-outline-secondary" onclick="return confirmDelete()">Delete</button>
                     </div>
                 </div>
             </form>
@@ -164,26 +164,26 @@
                     .forms["myForm"]["textarea1"]
                     .value;
                 if (title == "") {
-                    alert("제목");
+                    alert("제목을 입력해주세요.");
                     return false;
                 } else if (date == "") {
-                    alert("날짜");
+                    alert("날짜를 입력해주세요.");
                     return false;
                 }
                 if (writer == "") {
-                    alert("저자");
+                    alert("저자를 입력해주세요.");
                     return false;
                 }
                 if (genre == "") {
-                    alert("장르");
+                    alert("장르를 입력해주세요.");
                     return false;
                 }
                 if (rating == "") {
-                    alert("별점");
+                    alert("별점을 입력해주세요.");
                     return false;
                 }
                 if (textarea1 == "") {
-                    alert("본문");
+                    alert("본문을 입력해주세요.");
                     return false;
                 } else {
                     alert("성공적으로 저장되었습니다.");
@@ -192,30 +192,30 @@
             }
 
             function confirmCancel() {
-                if (confirm("취소 할래?") == true) {
+                if (confirm("수정을 취소하시겠습니까?") == true) {
                     location.href = "./index.html";
                 } else {
-                    alert("오케이 수고해 다시 작성해~");
+                    return false;
                 }
-
             }
 
             function confirmDelete() {
-                if (confirm("삭제 할래?") == true) {
+                if (confirm("위 게시물을 삭제하시겠습니까?") == true) {
                     location.href = "./index.html";
-                    
+                    alert("삭제되었습니다.");
                 } else {
-                    alert("오케이 수고해 다시 작성해~");
+                
+                    return false;
                     
                 }
 
             }
 
             function confirmReset() {
-                if (confirm("리셋 할래?") == true) {
+                if (confirm("내용을 초기화하시겠습니까?") == true) {
                     return true;
                 } else {
-                    alert("오케이 수고해 다시 작성해~");
+                 
                     return false;
                 }
 
@@ -223,21 +223,21 @@
 
         
             const title = document.getElementById('title');
-            title.value = "HIHIHIRdni";
+            title.value = "해리포터";
             const date = document.getElementById('date');
-            date.value = "2023-10-12"
+            date.value = "2023-10-11"
             const writer = document.getElementById('writer');
-            writer.value = "박세영";
+            writer.value = "J.K.롤링";
             const genre = document.getElementById("genre")
             genre
-                .options[2]
+                .options[1]
                 .selected = true;
             const rating = document.getElementById("rating");
             rating
                 .options[3]
                 .selected = true;
             const textarea1 = document.getElementById("textarea1");
-            textarea1.value = "안녕하세요";
+            textarea1.value = "나는 해리포터가 세상에서 제일 좋아한다. 매일매일 읽고 싶다. 때로는 호그와트에 입학하고 싶어서 서류전형을 알아보게된다. 하지만 이 학교는 다른 대학교와 전혀 다르다. 실기가 80 면접이 20이다. 나는 마법을 할 줄 모르기에 80점을 깎이고 시작하게 된다. 절망스럽다. \n때로는 힘든 순간도 찾아온다. 하지만 나는 해리포터의 후계자가 되어 그리핀도르에서 최강 짱을 먹을 것이다.\n 볼드모트가 왜 성격이 괴팍해지고, 세상에 반하는 사람이 되어 살아가는 줄 아는가? \n 그 마음의 진심을 아는가? \n\n 그것은 바로 ....\n 탈모의 요정이 찾아왔기 때문이다. 나는 마법을 배워 그의 저주받은 모공에 머리카락을 심어줄 것이다. \n 누군가는 나를 비웃고 지나갈 것이다. 하지만 나는 이 세상의 평화를 지키는 것. 볼드모트를 막는 유일한 방법은 그저 머리카락을 통해 세상에 복귀하는 희망과 자신감을 심어주는 것이라고 확신한다. \n 그저 내 앞길과 그의 모공에 축복을 빌어주길 바란다.\n"
         </script>
     </body>
 </html>

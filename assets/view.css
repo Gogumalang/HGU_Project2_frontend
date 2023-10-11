@@ -30,3 +30,9 @@ p {
     display: inline;
     font-family: "Lucida Console", "Courier New", "monospace";
 }
+
+#hr1 {
+    margin: 30px auto;
+    width: 30vh;
+
+}
