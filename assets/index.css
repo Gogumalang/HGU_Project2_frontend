@@ -1,27 +1,27 @@
-#searchDrop{
+#searchDrop {
     width: auto;
     justify-items: end;
-    
+
 }
 
-#main{
+#main {
     padding-left: 30px;
     padding-right: 30px;
 }
 
-#searchText{
+#searchText {
     margin-right: 12px;
 }
 
-.searchBox{
+.searchBox {
     margin-right: 12px;
     max-width: 250px;
 }
 
-#dropdown1{
+#dropdown1 {
     text-align: right;
 }
 
-.title{
+.title {
     font-family: Lucida Console, Courier New, monospace;
 }
